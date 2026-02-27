@@ -1,0 +1,441 @@
+.registration-form-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.registration-form-container h2 {
+  color: #333;
+  margin-bottom: 25px;
+  font-size: 1.8em;
+  border-bottom: 2px solid #667eea;
+  padding-bottom: 10px;
+}
+
+.registration-form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.form-section {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.form-section legend {
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #667eea;
+  padding: 0 10px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+  font-size: 0.95em;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1em;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.form-group input.input-error,
+.form-group select.input-error,
+.form-group textarea.input-error {
+  border-color: #dc3545;
+  background-color: #fff5f5;
+}
+
+.form-group input.input-error:focus,
+.form-group select.input-error:focus,
+.form-group textarea.input-error:focus {
+  box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.1);
+}
+
+.error-message {
+  color: #dc3545;
+  font-size: 0.85em;
+  margin-top: 5px;
+}
+
+.checkbox-group {
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.checkbox-group label {
+  margin: 0;
+  margin-bottom: 0;
+  font-weight: 500;
+}
+
+.checkbox-group .error-message {
+  grid-column: 1 / -1;
+  margin-left: 30px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.submit-button,
+.reset-button {
+  padding: 12px 32px;
+  font-size: 1em;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 150px;
+}
+
+.submit-button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.submit-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.submit-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.reset-button {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+.reset-button:hover {
+  background-color: #d0d0d0;
+  transform: translateY(-2px);
+}
+
+.alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  animation: slideIn 0.3s ease;
+}
+
+.alert-success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.alert-error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Success Screen Styles */
+.registration-success {
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px;
+  color: white;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  animation: slideIn 0.5s ease;
+}
+
+.success-icon {
+  font-size: 4em;
+  margin-bottom: 20px;
+  animation: bounce 0.6s ease;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.registration-success h2 {
+  font-size: 2.2em;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.success-message {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  font-size: 1.1em;
+}
+
+.registration-code-section {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.registration-code-section h3 {
+  margin-bottom: 15px;
+  font-size: 1.3em;
+}
+
+.registration-code-display {
+  background-color: white;
+  color: #667eea;
+  padding: 15px 25px;
+  border-radius: 6px;
+  font-family: 'Courier New', monospace;
+  font-size: 1.5em;
+  font-weight: bold;
+  letter-spacing: 2px;
+  word-break: break-all;
+}
+
+.qr-code-section {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.qr-code-section h3 {
+  margin-bottom: 20px;
+  font-size: 1.3em;
+}
+
+.qr-code-container {
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.qr-hint {
+  font-size: 0.95em;
+  margin-top: 15px;
+  opacity: 0.9;
+}
+
+.share-options {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.share-options h3 {
+  margin-bottom: 20px;
+  font-size: 1.3em;
+}
+
+.button-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.share-button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.whatsapp-button {
+  background-color: #25d366;
+}
+
+.whatsapp-button:hover {
+  background-color: #1ea952;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+}
+
+.copy-button {
+  background-color: #007acc;
+}
+
+.copy-button:hover {
+  background-color: #005a9e;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 122, 204, 0.3);
+}
+
+.email-button {
+  background-color: #ea4335;
+}
+
+.email-button:hover {
+  background-color: #d33425;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(234, 67, 53, 0.3);
+}
+
+.registration-link-section {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.registration-link-section h4 {
+  margin-bottom: 10px;
+  font-size: 0.95em;
+}
+
+.link-input {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9em;
+  word-break: break-all;
+  background-color: white;
+  color: #333;
+}
+
+.new-registration-button {
+  background-color: white;
+  color: #667eea;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 6px;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.new-registration-button:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 768px) {
+  .registration-form-container {
+    padding: 0 10px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .submit-button,
+  .reset-button {
+    width: 100%;
+  }
+
+  .form-section {
+    padding: 15px;
+  }
+
+  .registration-form-container h2 {
+    font-size: 1.5em;
+  }
+
+  .registration-success {
+    padding: 30px 15px;
+  }
+
+  .success-icon {
+    font-size: 3em;
+  }
+
+  .registration-success h2 {
+    font-size: 1.8em;
+  }
+
+  .button-group {
+    grid-template-columns: 1fr;
+  }
+
+  .share-button {
+    width: 100%;
+  }
+
+  .registration-code-display {
+    font-size: 1.2em;
+  }
+
+  .qr-code-container {
+    width: 100%;
+    max-width: 250px;
+  }
+}

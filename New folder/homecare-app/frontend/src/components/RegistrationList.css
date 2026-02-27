@@ -1,0 +1,271 @@
+.registration-list-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.registration-list-container h2 {
+  color: #333;
+  margin-bottom: 25px;
+  font-size: 1.8em;
+  border-bottom: 2px solid #667eea;
+  padding-bottom: 10px;
+}
+
+.loading,
+.error-message,
+.no-data {
+  text-align: center;
+  padding: 40px;
+  font-size: 1.1em;
+}
+
+.loading {
+  color: #667eea;
+}
+
+.error-message {
+  color: #dc3545;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: 4px;
+}
+
+.no-data {
+  color: #666;
+  background-color: #e8f4f8;
+}
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+.registration-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.registration-table thead {
+  background-color: #f8f9fa;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.registration-table th {
+  padding: 15px;
+  text-align: left;
+  font-weight: 600;
+  color: #333;
+  font-size: 0.95em;
+}
+
+.registration-table td {
+  padding: 15px;
+  border-bottom: 1px solid #e0e0e0;
+  color: #555;
+}
+
+.registration-table tbody tr:hover {
+  background-color: #f9f9f9;
+  transition: background-color 0.2s ease;
+}
+
+.actions-cell {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-view,
+.btn-delete,
+.btn-save,
+.btn-cancel {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9em;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-view {
+  background-color: #667eea;
+  color: white;
+}
+
+.btn-view:hover {
+  background-color: #5568d3;
+  transform: translateY(-2px);
+}
+
+.btn-delete {
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn-delete:hover {
+  background-color: #c82333;
+  transform: translateY(-2px);
+}
+
+.btn-save {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+}
+
+.btn-save:hover {
+  background-color: #218838;
+}
+
+.btn-cancel {
+  background-color: #6c757d;
+  color: white;
+  padding: 10px 20px;
+}
+
+.btn-cancel:hover {
+  background-color: #5a6268;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 8px;
+  max-width: 700px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #e0e0e0;
+  background-color: #f8f9fa;
+}
+
+.modal-header h3 {
+  margin: 0;
+  color: #333;
+  font-size: 1.3em;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 2em;
+  cursor: pointer;
+  color: #999;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease;
+}
+
+.close-button:hover {
+  color: #333;
+}
+
+.modal-body {
+  padding: 25px;
+}
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.edit-form .form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.edit-form .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.edit-form label {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+  font-size: 0.9em;
+}
+
+.edit-form input,
+.edit-form textarea {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.95em;
+  font-family: inherit;
+}
+
+.edit-form input:focus,
+.edit-form textarea:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.modal-footer {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  padding: 20px;
+  border-top: 1px solid #e0e0e0;
+  background-color: #f8f9fa;
+}
+
+@media (max-width: 768px) {
+  .registration-table {
+    font-size: 0.9em;
+  }
+
+  .registration-table th,
+  .registration-table td {
+    padding: 10px;
+  }
+
+  .actions-cell {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .btn-view,
+  .btn-delete {
+    width: 100%;
+    margin: 0;
+  }
+
+  .modal-content {
+    max-width: 95%;
+  }
+
+  .edit-form .form-row {
+    grid-template-columns: 1fr;
+  }
+}
